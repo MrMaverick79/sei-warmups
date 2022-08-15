@@ -60,10 +60,10 @@ const addToScreen = () => {
     $newDiv.css({
         top: randomHeight(),
         left: randomWidth(),
-        fontSize: Math.floor(Math.random() * 30) + 'px' 
+        fontSize: Math.floor(Math.random() * 80 + 20) + 'px' 
     })
     $("body").append($newDiv);
-    $($newDiv).fadeIn(2000).fadeOut(2000, function(){
+    $($newDiv).fadeIn(1000).fadeOut(2000, function(){
         $($newDiv).remove()
     });
     
