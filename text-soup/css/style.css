@@ -1,0 +1,10 @@
+/* Text soup */
+
+p {
+    visibility: hidden;
+}
+
+.show {
+    position: absolute;
+    display: none;
+}
