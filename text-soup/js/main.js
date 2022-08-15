@@ -21,7 +21,7 @@ console.log('Check');
 const textString = $('#randomText').html();
 
 //split up thew words as an array
-textString.trim() //shoould remove shitespace
+textString.trim() //shoould remove whitespace
 const wordArray = textString.split(" ");
 
 // Create a getRandomElementFromArray() function to pick a random word from the array.
@@ -35,6 +35,8 @@ const getRandomElementFromArray = (arr) => {
         getRandomElementFromArray(arr)
     }
 }; //end getRandomElement
+
+//these could be made into ranodomInteeger(int), where int can be the limits (font size, widths and heights etc)
 
 const randomWidth = () => {
     let width = Math.floor(Math.random() * window.innerWidth - 100)
@@ -58,10 +60,11 @@ const addToScreen = () => {
     $newDiv.css({
         top: randomHeight(),
         left: randomWidth(),
+        fontSize: Math.floor(Math.random() * 30) + 'px' 
     })
     $("body").append($newDiv);
     $($newDiv).fadeIn("slow").fadeOut("slow");
     
 }; //end addToScreen
 
-window.setInterval(addToScreen, 500);
+window.setInterval(addToScreen, 200);
