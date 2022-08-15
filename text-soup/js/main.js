@@ -63,7 +63,10 @@ const addToScreen = () => {
         fontSize: Math.floor(Math.random() * 30) + 'px' 
     })
     $("body").append($newDiv);
-    $($newDiv).fadeIn("slow").fadeOut("slow");
+    $($newDiv).fadeIn(2000).fadeOut(2000, function(){
+        $($newDiv).remove()
+    });
+    
     
 }; //end addToScreen
 
