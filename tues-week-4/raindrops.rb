@@ -15,29 +15,41 @@
 # raindrops(26) # => "26"
 
 
-def raindrops (num)
-    final_string = "" #this will be the final string
+# def raindrops (num)
+#     final_string = "" #this will be the final string
 
-    if num % 3 == 0 #check each of the conditions
-        final_string += "Pling" #add to final string
-    end
+#     if num % 3 == 0 #check each of the conditions
+#         final_string += "Pling" #add to final string
+#     end
 
-    if num % 5 == 0
-        final_string += "Plang"   
-    end
+#     if num % 5 == 0
+#         final_string += "Plang"   
+#     end
 
-    if num % 7 == 0
-        final_string += "Plong"
-    elsif final_string == ""
-        return num #returns num if it does not meet the conditions.
-    end
+#     if num % 7 == 0
+#         final_string += "Plong"
+#     elsif final_string == ""
+#         return num #returns num if it does not meet the conditions.
+#     end
     
-    final_string
-end #end raindrops
+#     final_string
+# end #end raindrops
 
+
+##shorter version
+
+def raindrops  (num)
+    rain_aray = []
+    num % 3 == 0 ? rain_aray << "Pling" : ""
+    num % 5 == 0 ? rain_aray << "Plang" : ""
+    num % 7 == 0 ? rain_aray << "Plong" : (return num)
+
+    rain_aray.join
+    
+end
 
 ##testing 
-puts raindrops(30) #=> "PlingPlang"
+
 puts raindrops(28) # => "Plong"
 puts raindrops(35) # => "PlangPlong"
 puts raindrops(26) # => "26"
